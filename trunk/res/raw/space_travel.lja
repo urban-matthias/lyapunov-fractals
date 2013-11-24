@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Space Travel
+x0=0.5
+sequence=AB
+exponentInterval=-1.7,0.6
+chaosGradient=\#1a125f,\#ddddc5,\#ddddc5
+iterations=47
+rotateLeft=true
+aInterval=4.1549308783938175,4.2629072513967055
+stabilityGradient=\#1a125f,\#ddddc5,\#ddddc5
+warmup=2
+bInterval=-0.5707723206235118,-0.46279594762062376
+gradations=2048
+oneGradient=false
+cyclicColoration=0
+histogramEqualization=false
+equation=0

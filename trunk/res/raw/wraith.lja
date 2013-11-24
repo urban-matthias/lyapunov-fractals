@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=2.9741935347449466,3.5208568292489826
+rotateLeft=false
+warmup=2
+iterations=50
+bInterval=2.9837397286607903,3.5304030231648262
+x0=0.5
+cyclicColoration=0
+chaosGradient=\#000000
+sequence=ABBBBAA
+name=Wraith
+oneGradient=true
+stabilityGradient=\#a3db50,\#ba0053,\#fc7260,\#27bb26,\#d8bd5b,\#c39481
+gradations=2048
+exponentInterval=-3.6509824,2.1777835
+histogramEqualization=false
+equation=0

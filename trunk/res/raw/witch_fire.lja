@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=3.3675454054260427,3.4689918772626998
+warmup=81
+rotateLeft=true
+iterations=100
+bInterval=1.252339460843948,1.353785932680605
+x0=0.013876259
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#99042f,\#6735a1,\#6cfce3,\#78d36d,\#fb25ae,\#f6894f,\#f6a520,\#01e408
+sequence=ABAAAABAABA
+name=Witch Fire
+oneGradient=false
+stabilityGradient=\#991503,\#9535a1,\#54defc,\#6dd395,\#fb0036,\#f6d54f,\#ecf61b,\#e6ff00
+exponentInterval=-1.0109723157995085,0.0
+gradations=1046
+equation=0

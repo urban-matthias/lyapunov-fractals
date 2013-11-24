@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=-1.8041771196934195,-1.418955291995365
+warmup=6
+rotateLeft=false
+iterations=30
+bInterval=-1.505453118008525,-1.1202312903104625
+x0=0.64383346
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#340000,\#860600,\#ff8205,\#ffffcc
+sequence=BBBABABAABABAAA
+name=Gilligan's Island
+oneGradient=false
+stabilityGradient=\#151005,\#001c7f,\#8cc5ff
+exponentInterval=-0.2,0.23872954
+gradations=293
+equation=0

@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=3.955648314324751,4.000017389636398
+rotateLeft=false
+warmup=46
+iterations=31
+bInterval=2.5133052002625895,2.5576742755742368
+x0=0.98721063
+cyclicColoration=0
+chaosGradient=\#d2b48c,\#cb410b,\#882d17,\#704214,\#321414
+sequence=BAAAAABBB
+name=Old Fossil
+oneGradient=false
+stabilityGradient=\#d2b48c,\#3d2b1f,\#79443b
+gradations=1680
+exponentInterval=-4.4564633,2.0761693
+histogramEqualization=false
+equation=0

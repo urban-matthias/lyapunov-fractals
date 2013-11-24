@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=0.09157999980152519,0.5961040015349621
+warmup=4
+rotateLeft=false
+iterations=5
+bInterval=-0.2560504597689963,0.24847354196456492
+x0=0.5
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#000000
+equation=2
+sequence=BBBABAAAB
+name=Royal Coat of Arms
+oneGradient=true
+stabilityGradient=\#332117,\#70452c,\#dc7b38,\#fede71,\#f9ffda,\#b4defd,\#6587b8,\#314a73,\#0d1536,\#332117,\#70452c,\#dc7b38,\#fede71,\#f9ffda,\#b4defd,\#6587b8,\#314a73,\#0d1536,\#332117,\#70452c,\#dc7b38,\#fede71,\#f9ffda,\#b4defd,\#6587b8,\#314a73,\#0d1536,\#332117,\#70452c,\#dc7b38,\#fede71,\#f9ffda,\#b4defd,\#6587b8,\#314a73,\#0d1536
+exponentInterval=-2.3485646,10.114156
+gradations=2048

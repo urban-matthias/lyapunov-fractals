@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Filigree Entities
+sequence=ABBBBAA
+aInterval=0.8727702727295923,3.320514170669141
+bInterval=1.5871404218972602,4.034884319836809
+iterations=50
+warmup=2
+x0=0.5
+stabilityGradient=\#680090,\#c8ff00
+chaosGradient=\#680090,\#c8ff00,\#c8ff00
+rotateLeft=true
+exponentInterval=-3,0.6
+gradations=2048
+oneGradient=false
+cyclicColoration=0
+histogramEqualization=false
+equation=0

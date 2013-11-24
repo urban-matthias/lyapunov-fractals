@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-53.99293444308237,43.74640227924541
+warmup=5
+rotateLeft=false
+iterations=15
+bInterval=-61.52711323774358,36.21222348458352
+x0=0.09104729
+histogramEqualization=true
+cyclicColoration=0
+chaosGradient=\#e26e00,\#361400,\#7b0f12,\#eadf86
+equation=1
+sequence=AB
+name=Soul's Ascent
+oneGradient=false
+stabilityGradient=\#dd1e2f,\#7ec0d8,\#588de9,\#c905da,\#113462,\#ef466d,\#68d272
+exponentInterval=0.0,29.188095
+gradations=2037

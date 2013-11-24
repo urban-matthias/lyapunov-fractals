@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=0.3737549426059509,0.5889572412014601
+warmup=67
+rotateLeft=false
+iterations=10
+bInterval=-0.10724401449117876,0.10795828410433031
+x0=0.8992659
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#000000
+equation=2
+sequence=AABBCBCACCA
+name=The Prayer
+oneGradient=true
+stabilityGradient=\#0d1536,\#314a73,\#6587b8,\#b4defd,\#f9ffda,\#fede71,\#dc7b38,\#70452c,\#332117,\#0d1536,\#314a73,\#6587b8,\#b4defd,\#f9ffda,\#fede71,\#dc7b38,\#70452c,\#332117,\#0d1536,\#314a73,\#6587b8,\#b4defd,\#f9ffda,\#fede71,\#dc7b38,\#70452c,\#332117,\#0d1536,\#314a73,\#6587b8,\#b4defd,\#f9ffda,\#fede71,\#dc7b38,\#70452c,\#332117,\#0d1536,\#314a73,\#6587b8,\#b4defd,\#f9ffda,\#fede71,\#dc7b38,\#70452c,\#332117,\#0d1536,\#314a73,\#6587b8,\#b4defd,\#f9ffda,\#fede71,\#dc7b38,\#70452c,\#332117,\#0d1536,\#314a73,\#6587b8,\#b4defd,\#f9ffda,\#fede71,\#dc7b38,\#70452c,\#332117,\#0d1536,\#314a73,\#6587b8,\#b4defd,\#f9ffda,\#fede71,\#dc7b38,\#70452c,\#332117
+exponentInterval=-10.300255,10.058891
+gradations=65000

@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Planetary Vein
+x0=0.5
+sequence=AB
+exponentInterval=-1.7,0.6
+chaosGradient=\#741c00,\#ddddc5,\#ddddc5
+iterations=47
+rotateLeft=true
+aInterval=4.318482329377875,4.704230986995737
+stabilityGradient=\#741c00,\#ddddc5,\#ddddc5
+warmup=2
+bInterval=-0.7727453465086519,-0.38699668889079064
+gradations=2048
+oneGradient=false
+cyclicColoration=0
+histogramEqualization=false
+equation=0

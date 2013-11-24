@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=-0.7938550730007181,-0.7857526970151933
+warmup=6
+rotateLeft=true
+iterations=30
+bInterval=-2.1207953493858174,-2.112692973400293
+x0=0.64383346
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#6c238d,\#e7c007,\#7d1d92,\#7d4582,\#119a84,\#459195,\#56aba9,\#5ce87f,\#666a04
+sequence=BBBABABAABABAAA
+name=Curves
+oneGradient=false
+stabilityGradient=\#381d00,\#381d00,\#381d00,\#ab5a00,\#abbcff
+exponentInterval=-0.7,0.0
+gradations=1234
+equation=0

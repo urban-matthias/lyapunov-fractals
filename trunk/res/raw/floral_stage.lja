@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Floral Stage
+x0=0.5
+sequence=ABBBBAA
+exponentInterval=-1.7,0.6
+chaosGradient=\#192c00,\#c8ff00,\#c8ff00
+iterations=50
+rotateLeft=false
+aInterval=3.6740128875316698,3.9513772064678774
+stabilityGradient=\#192c00,\#c8ff00,\#c8ff00
+warmup=2
+bInterval=1.39385009909611,1.6712144180323176
+gradations=2048
+cyclicColoration=0
+oneGradient=false
+histogramEqualization=false
+equation=0

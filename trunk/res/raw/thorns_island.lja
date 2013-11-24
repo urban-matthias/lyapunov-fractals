@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-0.6745629766371576,-0.6634422044090508
+warmup=4
+rotateLeft=false
+iterations=10
+bInterval=-0.04885334708213436,-0.03773257485402573
+x0=0.5
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#341b00,\#863800,\#ff9405,\#eeccff,\#341b00,\#863800,\#ff9405,\#eeccff,\#341b00,\#863800,\#ff9405,\#eeccff,\#341b00,\#863800,\#ff9405,\#eeccff
+equation=2
+sequence=ABCABCAC
+name=Thorns Island
+oneGradient=false
+stabilityGradient=\#340000,\#860600,\#ff8205,\#ffffcc
+exponentInterval=-9.79286,29.378899
+gradations=2048

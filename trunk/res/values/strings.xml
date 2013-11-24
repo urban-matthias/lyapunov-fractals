@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="help_contents">
+        <item>Introduction</item>
+        <item>Gestures</item>
+        <item>Generate / Stop</item>
+        <item>Parameters</item>
+        <item>Colors</item>
+        <item>Display</item>
+        <item>Settings</item>
+    </string-array>
+    
+    <string-array name="equations">
+        <item>Logistic</item>
+        <item>Butterfly Newton</item>
+        <item>Standard Newton</item>
+    </string-array>
+    
+    <string-array name="gradient_ops">
+        <item>Rotate</item>
+        <item>Saturate</item>
+        <item>Brighten</item>
+    </string-array>
+    
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    
+    <string name="version">1.0</string>
+    <string name="app_name">Ljapunow Fractals</string>
+    <string name="help_title">Ljapunow Fractals - Help Contents</string>
+    <string name="loading_app">Loading&#8230;</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="suggest">Suggest</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="menu_exit">Exit</string>
+    <string name="dialog_enter_red">Red Value</string>
+    <string name="dialog_enter_green">Green Value</string>
+    <string name="dialog_enter_blue">Blue Value</string>
+    <string name="dialog_pick_color">Pick a Color</string>
+    <string name="menu_stop">Stop</string>
+    <string name="menu_generate">Generate</string>
+    <string name="menu_stability_gradient">Stable Region</string>
+    <string name="menu_chaos_gradient">Chaotic Region</string>
+    <string name="menu_cyclic_coloration">Cyclic Coloration</string>
+    <string name="dialog_cyclic_coloration">Factor (0 to disable)</string>
+    <string name="menu_histogram">Histogram Equalization</string>
+    <string name="menu_one_gradient">One Gradient Only</string>
+    <string name="menu_exponent">Colored Region</string>
+    <string name="menu_auto_exponent_interval">Automatic Colored Region</string>
+    <string name="dialog_exponent">Exponent Interval (min,max)</string>
+    <string name="menu_iterations">Iterations</string>
+    <string name="dialog_iterations">Iterations</string>
+    <string name="menu_warmup">Warm-up Rounds</string>
+    <string name="dialog_warmup">Warm-up Rounds</string>
+    <string name="menu_sequence">ABC Sequence</string>
+    <string name="dialog_sequence">Sequence [ABC]+</string>
+    <string name="menu_x0">X0</string>
+    <string name="dialog_x0">X0</string>
+    <string name="menu_xint">A Interval</string>
+    <string name="dialog_xint">A Interval (min,max)</string>
+    <string name="menu_yint">B Interval</string>
+    <string name="dialog_yint">B Interval (min,max)</string>
+    <string name="menu_swap">Rotate Left</string>
+    <string name="menu_invert">Invert Gradient</string>
+    <string name="dialog_invert">Invert Gradient</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_load">Load</string>
+    <string name="menu_remove">Discard</string>
+    <string name="menu_import">Import</string>
+    <string name="menu_export">Export</string>
+    <string name="menu_sub_presets">Presets</string>
+    <string name="menu_sub_color">Colors</string>
+    <string name="menu_sub_iter">Iterations</string>
+    <string name="menu_sub_params">Parameters</string>
+    <string name="menu_sub_display">Display</string>
+    <string name="menu_sub_help">Help</string>
+    <string name="menu_about">About</string>
+    <string name="dialog_about">About</string>
+    <string name="menu_help_contents">Help Contents</string>
+    <string name="file_location">Location</string>
+    <string name="file_new">New</string>
+    <string name="file_select">OK</string>
+    <string name="file_name">Filename:</string>
+    <string name="file_create">Save</string>
+    <string name="file_no_data">No Data</string>
+    <string name="sorry">Sorry</string>
+    <string name="menu_save_image">Save as PNG</string>
+    <string name="menu_fullscreen">Full-screen</string>
+    <string name="menu_debug">Show Parameters</string>
+    <string name="menu_randomize">Randomize</string>
+    <string name="confirm_preset_save">Preset already exists. Do you really want to replace it?</string>
+    <string name="confirm_preset_remove">Do you really want to discard this preset?</string>
+    <string name="confirm_preset_export">File already exists. Do you really want to replace it?</string>
+    <string name="menu_gradations">Gradations</string>
+    <string name="dialog_gradations">Gradations</string>
+    <string name="menu_load_gradient">Load</string>
+    <string name="menu_save_gradient">Save</string>
+    <string name="menu_discard_gradient">Discard</string>
+    <string name="menu_reverse_gradient">Reverse</string>
+    <string name="menu_rotate_gradient">Rotate</string>
+    <string name="dialog_rotate_gradient">Degree (180 = complementary)</string>
+    <string name="text_red">R:</string>
+    <string name="text_green">G:</string>
+    <string name="text_blue">B:</string>
+    <string name="menu_equation">Equation</string>
+    <string name="dialog_equation">Equation</string>
+    <string name="menu_duplicate_gradient">Duplicate</string>
+    <string name="dialog_gradient_ops">Gradient Operation</string>
+    <string name="menu_shuffle_gradient">Shuffle</string>
+    <string name="menu_randomize_gradient">Randomize</string>
+    <string name="dialog_repeat">Repeat</string>
+    
+</resources>

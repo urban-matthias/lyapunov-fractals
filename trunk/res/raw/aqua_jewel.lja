@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-1273.0339431762695,526.9660568237305
+warmup=1
+rotateLeft=false
+iterations=31
+bInterval=-1487.2667822520696,853.7587609608211
+x0=0.9403857
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#0e0515,\#120835,\#2d2360,\#574b91,\#7b72aa,\#102d41,\#305b8a,\#79a2d1,\#bbcff1,\#0e0515,\#120835,\#2d2360,\#574b91,\#7b72aa,\#102d41,\#305b8a,\#79a2d1,\#bbcff1,\#0e0515,\#120835,\#2d2360,\#574b91,\#7b72aa,\#102d41,\#305b8a,\#79a2d1,\#bbcff1,\#0e0515,\#120835,\#2d2360,\#574b91,\#7b72aa,\#102d41,\#305b8a,\#79a2d1,\#bbcff1
+equation=1
+sequence=BBBAABAB
+name=Aqua Jewel
+oneGradient=false
+stabilityGradient=\#ff0000
+exponentInterval=0.0,10
+gradations=2048

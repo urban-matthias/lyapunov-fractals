@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-0.5951736350736144,-0.5555597642561388
+warmup=4
+rotateLeft=false
+iterations=10
+bInterval=-0.8218144177735537,-0.7822005469560683
+x0=0.5
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#ff8200,\#361400,\#7b0f12,\#eadf86
+equation=2
+sequence=BBCBBAC
+name=Heart And Crown
+oneGradient=false
+stabilityGradient=\#ff8200,\#361400,\#7b0f12,\#eadf86
+exponentInterval=-7,5.2
+gradations=2048

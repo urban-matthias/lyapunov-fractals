@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=3.9044215063935526,3.932490672657384
+warmup=6
+rotateLeft=false
+iterations=30
+bInterval=1.9976618474757453,2.0257310137395774
+x0=0.64383346
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#340000,\#860600,\#ff8205,\#ffffcc
+sequence=BBBABABAABABAAA
+name=Saturn Rings
+oneGradient=false
+stabilityGradient=\#011955,\#185eb3,\#72c5f7,\#45add0,\#026374
+exponentInterval=-0.9905944,0.23872954
+gradations=293
+equation=0

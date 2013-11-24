@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=3.473008291238339,3.743146181601493
+warmup=81
+rotateLeft=false
+iterations=100
+bInterval=1.5549473087425596,1.8250851991057127
+x0=0.013876259
+histogramEqualization=false
+cyclicColoration=1000
+chaosGradient=\#412f23,\#877166,\#1d383f,\#588f96,\#3f6019,\#68923e
+sequence=ABAAAABAABA
+name=Autumn Leaves
+oneGradient=false
+stabilityGradient=\#071505,\#353508,\#605623,\#91834b,\#aa8872,\#411010,\#8a3730,\#d19279,\#f1d2bb
+exponentInterval=-0.9905944,0.23872954
+gradations=293
+equation=0
