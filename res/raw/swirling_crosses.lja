@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=0.10561712055966548,0.3646638998846981
+warmup=39
+rotateLeft=false
+iterations=10
+bInterval=-0.12825012829071392,0.1307966510343187
+x0=0.57964134
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#000000
+equation=2
+sequence=BCACBCCACCBCACBAAC
+name=Swirling Crosses
+oneGradient=true
+stabilityGradient=\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3
+exponentInterval=-3,37.316948
+gradations=65000

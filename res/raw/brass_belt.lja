@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=3.896260129163804,3.896447686547477
+warmup=81
+rotateLeft=false
+iterations=100
+bInterval=1.4389430042722016,1.439130561655497
+x0=0.013876259
+histogramEqualization=true
+cyclicColoration=1000
+chaosGradient=\#340000,\#860600
+sequence=ABAAAABAABA
+name=Brass Belt
+oneGradient=false
+stabilityGradient=\#0a1505,\#243508,\#4c6023,\#7a914b,\#9faa72,\#412e10,\#8a6b32,\#d1bc79,\#f1e5bb
+exponentInterval=-0.9905944,0.23872954
+gradations=293
+equation=0

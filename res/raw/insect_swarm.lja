@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-0.6502606695363734,-0.43231994175799765
+warmup=4
+rotateLeft=false
+iterations=10
+bInterval=-0.8973323515092937,-0.6793916237308641
+x0=0.5
+histogramEqualization=true
+cyclicColoration=0
+chaosGradient=\#000000
+equation=2
+sequence=BBCBBAC
+name=Insect Swarm
+oneGradient=true
+stabilityGradient=\#ccd6ff,\#0578ff,\#007a86,\#003134
+exponentInterval=-3.8327634,12.04526
+gradations=2048

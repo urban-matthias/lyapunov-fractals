@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Luscious Uranus Fern
+x0=0.5
+sequence=AB
+exponentInterval=-1.7,0.6
+chaosGradient=\#192c00,\#c8ff00,\#c8ff00
+iterations=47
+rotateLeft=true
+aInterval=3.863657973189225,4.144230853774417
+stabilityGradient=\#192c00,\#c8ff00,\#c8ff00
+warmup=2
+bInterval=-0.5305537825392365,-0.24998090195404457
+gradations=2048
+oneGradient=false
+cyclicColoration=0
+histogramEqualization=false
+equation=0

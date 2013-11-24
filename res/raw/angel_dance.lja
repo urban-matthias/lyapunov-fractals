@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-0.6618977226349824,-0.5208361529743449
+warmup=4
+rotateLeft=false
+iterations=10
+bInterval=-0.0723845718524011,0.06867699780827102
+x0=0.5
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#ffccee,\#ff7c05,\#861200,\#340500,\#ffccee,\#ff7c05,\#861200,\#340500,\#ffccee,\#ff7c05,\#861200,\#340500,\#ffccee,\#ff7c05,\#861200,\#340500
+equation=2
+sequence=ABCABC
+name=Angel Dance
+oneGradient=false
+stabilityGradient=\#340000,\#860600,\#ff8205,\#ffffcc
+exponentInterval=-18.936123,10.131397
+gradations=2048

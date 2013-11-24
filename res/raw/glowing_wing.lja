@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-0.6427656243243044,-0.6363261141684887
+warmup=4
+rotateLeft=false
+iterations=20
+bInterval=-0.03575874020183415,-0.02931923004601693
+x0=0.5
+histogramEqualization=true
+cyclicColoration=0
+chaosGradient=\#000000
+equation=2
+sequence=ABCABC
+name=Glowing Wing
+oneGradient=true
+stabilityGradient=\#61002b,\#ff0574,\#ffdfcc
+exponentInterval=-31.85097,10.924212
+gradations=2048

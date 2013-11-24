@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Classic Zircon Zity
+sequence=BBBBBBAAAAAA
+iterations=300
+exponentInterval=-2.3,0.5
+aInterval=3.4,4.0
+bInterval=2.5,3.4
+x0=0.5
+stabilityGradient=\#2a0c00,\#812f2f,\#c5c5ad,\#446544,\#2a0c00,\#812f2f,\#c5c5ad,\#2a0c00
+chaosGradient=\#513b3b,\#9c836a,\#bc9576
+warmup=12
+rotateLeft=false
+gradations=2048
+oneGradient=false
+cyclicColoration=0
+histogramEqualization=false
+equation=0

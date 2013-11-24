@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-2.0774626170241066,1.553831258208748
+warmup=2
+rotateLeft=false
+iterations=5
+bInterval=-2.487460199553767,1.1438336756790877
+x0=0.5
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#7a7a6c,\#6d6947,\#463c46,\#e54c35,\#c95f3f,\#ae2d2b,\#e9a474,\#ec8c6d,\#792c28,\#b77330,\#a59516,\#ce973b,\#d17832
+equation=1
+sequence=AB
+name=Butterflies
+oneGradient=false
+stabilityGradient=\#9400d3,\#4b0082,\#0000ff,\#008000,\#ffff00,\#ff8000,\#ff0000
+exponentInterval=-0.3465736,10
+gradations=2048

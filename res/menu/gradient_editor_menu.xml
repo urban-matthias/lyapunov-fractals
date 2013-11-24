@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/duplicate_gradient"
+        android:icon="@drawable/ic_menu_cc"
+        android:title="@string/menu_duplicate_gradient">
+    </item>
+    <item
+        android:id="@+id/reverse_gradient"
+        android:icon="@drawable/ic_menu_revert"
+        android:title="@string/menu_reverse_gradient">
+    </item>
+    <item
+        android:id="@+id/rotate_gradient"
+        android:icon="@drawable/ic_menu_complement"
+        android:title="@string/menu_rotate_gradient">
+    </item>
+    <item
+        android:id="@+id/shuffle_gradient"
+        android:icon="@drawable/ic_menu_cards"
+        android:title="@string/menu_shuffle_gradient">
+    </item>
+    <item
+        android:id="@+id/randomize_gradient"
+        android:icon="@drawable/ic_menu_dice"
+        android:title="@string/menu_randomize_gradient">
+    </item>
+    <item
+        android:id="@+id/load_gradient"
+        android:icon="@drawable/ic_menu_archive"
+        android:title="@string/menu_load_gradient">
+    </item>
+    <item
+        android:id="@+id/save_gradient"
+        android:icon="@drawable/ic_menu_save"
+        android:title="@string/menu_save_gradient">
+    </item>
+    <item
+        android:id="@+id/discard_gradient"
+        android:icon="@drawable/ic_menu_delete"
+        android:title="@string/menu_discard_gradient">
+    </item>
+    
+</menu>

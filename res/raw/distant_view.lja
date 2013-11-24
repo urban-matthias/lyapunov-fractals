@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=-2.899661236589756,4.612761270501322
+warmup=2
+rotateLeft=false
+iterations=5
+bInterval=-2.7291628660369835,4.7832596410540935
+x0=0.5
+cyclicColoration=1000
+chaosGradient=\#0d2d44,\#0d597b,\#23759a,\#b4bbce,\#367084,\#5683a2,\#bbc9d2,\#e7eaf1,\#bed4e2,\#5583a4
+sequence=AB
+name=Distant View
+oneGradient=false
+stabilityGradient=\#340000,\#860600,\#ff8205,\#ffffcc
+exponentInterval=-4.7952538,1.3337005
+gradations=804
+histogramEqualization=false
+equation=0

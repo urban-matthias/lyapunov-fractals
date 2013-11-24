@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Foreign Planet Surface
+sequence=AB
+iterations=50
+exponentInterval=-1.7,0.6
+aInterval=6.817818191498243,6.987902122245905
+bInterval=-0.30995969906098125,-0.13987576831331955
+x0=0.5
+stabilityGradient=\#ff5700,\#c8ff00
+chaosGradient=\#ff5700,\#c8ff00,\#c8ff00
+warmup=2
+rotateLeft=true
+gradations=2048
+cyclicColoration=0
+oneGradient=false
+histogramEqualization=false
+equation=0

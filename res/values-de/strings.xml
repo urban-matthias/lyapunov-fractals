@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="help_contents">
+        <item>Einleitung</item>
+        <item>Gesten</item>
+        <item>Generiere / Stopp</item>
+        <item>Parameter</item>
+        <item>Farben</item>
+        <item>Anzeige</item>
+        <item>Voreinstellungen</item>
+    </string-array>
+    
+    <string-array name="equations">
+        <item>Logistisch</item>
+        <item>Schmetterling Newton</item>
+        <item>Standard Newton</item>
+    </string-array>
+    
+    <string-array name="gradient_ops">
+        <item>Rotieren</item>
+        <item>Sättigen</item>
+        <item>Helligkeit</item>
+    </string-array>
+    
+    <string name="version">1.0</string>
+    <string name="app_name">Ljapunow Fractals</string>
+    <string name="help_title">Ljapunow Fractals - Hilfe</string>
+    <string name="loading_app">Lade&#8230;</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="suggest">Vorschlagen</string>
+    <string name="permission_denied">Zugang verweigert</string>
+    <string name="menu_exit">Beenden</string>
+    <string name="dialog_enter_red">Roter Farbanteil</string>
+    <string name="dialog_enter_green">Grüner Farbanteil</string>
+    <string name="dialog_enter_blue">Blauer Farbanteil</string>
+    <string name="dialog_pick_color">Wähle eine Farbe</string>
+    <string name="menu_stop">Stopp</string>
+    <string name="menu_generate">Generiere</string>
+    <string name="menu_stability_gradient">Stabiler Bereich</string>
+    <string name="menu_chaos_gradient">Chaotischer Bereich</string>
+    <string name="menu_cyclic_coloration">Zyklische Einfärbung</string>
+    <string name="dialog_cyclic_coloration">Faktor (0 für Aus)</string>
+    <string name="menu_histogram">Histogrammausgleich</string>
+    <string name="menu_one_gradient">Nur ein Gradient</string>
+    <string name="menu_exponent">Eingefärbter Bereich</string>
+    <string name="menu_auto_exponent_interval">Automatischer Bereich</string>
+    <string name="dialog_exponent">Exponentenintervall (min,max)</string>
+    <string name="menu_iterations">Iterationen</string>
+    <string name="dialog_iterations">Iterationen</string>
+    <string name="menu_warmup">Einschwingrunden</string>
+    <string name="dialog_warmup">Einschwingrunden</string>
+    <string name="menu_sequence">ABC-Folge</string>
+    <string name="dialog_sequence">Folge [ABC]+</string>
+    <string name="menu_x0">X0</string>
+    <string name="dialog_x0">X0</string>
+    <string name="menu_xint">A-Intervall</string>
+    <string name="dialog_xint">A-Intervall (min,max)</string>
+    <string name="menu_yint">B-Intervall</string>
+    <string name="dialog_yint">B-Intervall (min,max)</string>
+    <string name="menu_swap">Linksdreh</string>
+    <string name="menu_invert">Invertiere Farbverlauf</string>
+    <string name="dialog_invert">Invertiere Farbverlauf</string>
+    <string name="menu_save">Speichern</string>
+    <string name="menu_load">Laden</string>
+    <string name="menu_remove">Löschen</string>
+    <string name="menu_import">Importieren</string>
+    <string name="menu_export">Exportieren</string>
+    <string name="menu_sub_presets">Voreinstellungen</string>
+    <string name="menu_sub_color">Farben</string>
+    <string name="menu_sub_iter">Iterationen</string>
+    <string name="menu_sub_params">Parameter</string>
+    <string name="menu_sub_display">Anzeige</string>
+    <string name="menu_sub_help">Hilfe</string>
+    <string name="menu_about">Über</string>
+    <string name="dialog_about">Über</string>
+    <string name="menu_help_contents">Hilfe</string>
+    <string name="file_location">Ort</string>
+    <string name="file_new">Neu</string>
+    <string name="file_select">OK</string>
+    <string name="file_name">Dateiname:</string>
+    <string name="file_create">Speichern</string>
+    <string name="file_no_data">Keine Daten</string>
+    <string name="sorry">Fehler</string>
+    <string name="menu_save_image">Speichern als PNG</string>
+    <string name="menu_fullscreen">Vollbild</string>
+    <string name="menu_debug">Parameter einblenden</string>
+    <string name="menu_randomize">Zufallsbelegung</string>
+    <string name="confirm_preset_save">Voreinstellung existiert bereits. Soll sie wirklich ersetzt werden?</string>
+    <string name="confirm_preset_remove">Soll die Voreinstellung wirklich gelöscht werden?</string>
+    <string name="confirm_preset_export">Datei existiert bereits. Soll sie wirklich ersetzt werden?</string>
+    <string name="menu_gradations">Abstufungen</string>
+    <string name="dialog_gradations">Abstufungen</string>
+    <string name="menu_load_gradient">Laden</string>
+    <string name="menu_save_gradient">Speichern</string>
+    <string name="menu_discard_gradient">Löschen</string>
+    <string name="menu_reverse_gradient">Umkehren</string>
+    <string name="menu_rotate_gradient">Rotieren</string>
+    <string name="dialog_rotate_gradient">Grad (180 = komplementär)</string>
+    <string name="text_red">R:</string>
+    <string name="text_green">G:</string>
+    <string name="text_blue">B:</string>
+    <string name="menu_equation">Gleichung</string>
+    <string name="dialog_equation">Gleichung</string>
+    <string name="menu_duplicate_gradient">Duplizieren</string>
+    <string name="dialog_gradient_ops">Farbverlaufsoperation</string>
+    <string name="menu_shuffle_gradient">Vertauschen</string>
+    <string name="menu_randomize_gradient">Zufallsbelegung</string>
+    <string name="dialog_repeat">Wiederholen</string>
+    
+ </resources>

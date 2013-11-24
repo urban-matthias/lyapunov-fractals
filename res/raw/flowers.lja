@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-18.77592415787349,35.54870196040672
+warmup=29
+rotateLeft=false
+iterations=20
+bInterval=-19.04691693177489,35.277709186504936
+x0=0.011416435
+histogramEqualization=true
+cyclicColoration=0
+chaosGradient=\#cd9b46,\#a87e4c,\#a87e4c,\#99a446,\#55864f,\#615f36,\#282c37,\#695077,\#447b82,\#293948
+equation=1
+sequence=BBAACCABCBBAAA
+name=Flowers
+oneGradient=false
+stabilityGradient=\#dd1e2f,\#7ec0d8,\#588de9,\#c905da,\#113462,\#ef466d,\#68d272
+exponentInterval=0.0,12
+gradations=2037

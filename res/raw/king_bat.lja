@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-1.2879271615648178,0.13017032461215894
+warmup=4
+rotateLeft=false
+iterations=10
+bInterval=-0.709791495723554,0.708305990453773
+x0=0.5
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#ffccee,\#ff7c05,\#861200,\#340500,\#ffccee,\#ff7c05,\#861200,\#340500,\#ffccee,\#ff7c05,\#861200,\#340500,\#ffccee,\#ff7c05,\#861200,\#340500
+equation=2
+sequence=ABCABC
+name=King Bat
+oneGradient=false
+stabilityGradient=\#340000,\#860600,\#ff8205,\#ffffcc
+exponentInterval=-18.936123,10.131397
+gradations=2048

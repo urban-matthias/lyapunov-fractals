@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Zircon Zity Night
+sequence=BBBBBBAAAAAA
+iterations=30
+exponentInterval=-1.7,0.3
+aInterval=3.4,4.0
+bInterval=2.5,3.4
+x0=0.5
+stabilityGradient=\#000000,\#ff7f00
+chaosGradient=\#000000,\#3a5fcd
+warmup=12
+rotateLeft=false
+gradations=2048
+oneGradient=false
+cyclicColoration=0
+histogramEqualization=false
+equation=0

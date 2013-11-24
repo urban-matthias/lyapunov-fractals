@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-1.7053639168218744,2.268557591940392
+warmup=4
+rotateLeft=true
+iterations=10
+bInterval=-1.9593198396814577,2.014601669081788
+x0=0.5
+histogramEqualization=true
+cyclicColoration=0
+chaosGradient=\#000000
+equation=2
+sequence=ACbbca
+name=Nosferatu
+oneGradient=true
+stabilityGradient=\#fffccc,\#ff6c05,\#860005,\#340000
+exponentInterval=-3.4577684,41.282043
+gradations=1816

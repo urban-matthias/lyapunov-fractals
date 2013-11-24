@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Classic AB
+sequence=AB
+iterations=300
+exponentInterval=-4,0.6
+aInterval=2,4
+bInterval=2,4
+x0=0.5
+stabilityGradient=\#2a0c00,\#812f2f,\#c5c5ad,\#2a0c00,\#812f2f,\#c5c5ad
+chaosGradient=\#514848,\#9c8a7a,\#bc9b81
+warmup=2
+rotateLeft=false
+gradations=2048
+oneGradient=false
+cyclicColoration=0
+histogramEqualization=false
+equation=0

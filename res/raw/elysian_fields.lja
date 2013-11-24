@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+name=Elysian Fields
+aInterval=1.6129560325677579,1.8712175768068544
+rotateLeft=true
+warmup=15
+iterations=25
+bInterval=3.493180520629376,4.147402388595487
+x0=0.008074939
+sequence=AAABBBAAAABBBBBA
+stabilityGradient=\#000000,\#00ffbe
+chaosGradient=\#8e0400,\#000000
+exponentInterval=-1.3017254,0.5587045
+gradations=2048
+oneGradient=false
+cyclicColoration=0
+histogramEqualization=false
+equation=0

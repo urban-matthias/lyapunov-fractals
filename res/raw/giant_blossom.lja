@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-0.23720582148659242,13.946550751044631
+warmup=4
+rotateLeft=false
+iterations=10
+bInterval=-7.004695300292369,7.179061272242361
+x0=0.5
+histogramEqualization=true
+cyclicColoration=0
+chaosGradient=\#000000
+equation=2
+sequence=Aaabb
+name=Giant Blossom
+oneGradient=true
+stabilityGradient=\#e26e00,\#361400,\#7b0f12,\#eadf86
+exponentInterval=-78.068436,10.690056
+gradations=2048

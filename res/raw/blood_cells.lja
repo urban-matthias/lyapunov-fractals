@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=-1.1939522001513643,-1.1343369329984254
+warmup=6
+rotateLeft=false
+iterations=30
+bInterval=-1.7295295373038637,-1.6699142701509235
+x0=0.64383346
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#340000,\#860600,\#ff8205,\#ffffcc
+sequence=BBBABABAABABAAA
+name=Blood Cells
+oneGradient=false
+stabilityGradient=\#050a15,\#0c0835,\#232760,\#2b30a1
+exponentInterval=-0.2,0.23872954
+gradations=293
+equation=0

@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-26.33734024093382,16.09080807709686
+warmup=5
+rotateLeft=false
+iterations=15
+bInterval=-33.87151903559522,8.55662928243516
+x0=0.09104729
+histogramEqualization=true
+cyclicColoration=0
+chaosGradient=\#e2005c,\#36001b,\#7b0f74,\#ea868a
+equation=1
+sequence=AB
+name=Escape from Hades
+oneGradient=false
+stabilityGradient=\#dd1e2f,\#7ec0d8,\#588de9,\#c905da,\#113462,\#ef466d,\#68d272
+exponentInterval=0.0,10
+gradations=2037

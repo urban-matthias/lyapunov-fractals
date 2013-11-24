@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=1.014043536990759,1.681412366436021
+rotateLeft=true
+warmup=40
+iterations=11
+bInterval=3.11454947947364,3.7819183089189017
+x0=0.30229396
+cyclicColoration=0
+chaosGradient=\#000000
+sequence=BBBBBBAB
+name=Desert Valley
+oneGradient=true
+stabilityGradient=\#6c541e,\#e5aa70,\#c19a6b,\#c2b280,\#e1a95f
+gradations=65025
+exponentInterval=-1.0,0.2
+histogramEqualization=false
+equation=0

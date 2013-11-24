@@ -1,0 +1,17 @@
+#Ljapunow Fractals Settings, Version 1.0
+aInterval=3.4844150490591033,3.535340777174144
+warmup=81
+rotateLeft=false
+iterations=100
+bInterval=1.2057284931346022,1.2566542212496428
+x0=0.013876259
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#99042f,\#6735a1,\#6cfce3,\#78d36d,\#fb25ae,\#f6894f,\#f6a520,\#01e408
+sequence=ABAAAABAABA
+name=Neon Eye
+oneGradient=false
+stabilityGradient=\#99042f,\#6735a1,\#6cfce3,\#78d36d,\#fb25ae,\#f6894f,\#f6a520,\#01e408
+exponentInterval=-0.44783056,2.540572
+gradations=1046
+equation=0
