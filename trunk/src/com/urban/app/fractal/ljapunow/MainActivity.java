@@ -564,6 +564,23 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 
 	public void onStorageChange(String storageID)
 	{
+		if (storageID.equals(FractalGenerator.STORAGE_EQUATION))
+		{
+			int equation = NumberUtil.toInt(Storage.get(FractalGenerator.STORAGE_EQUATION));
+			switch (equation)
+			{
+			case FractalGenerator.EQUATION_LOGISTIC:
+				presets.loadDefaultLogistic();
+				break;
+			case FractalGenerator.EQUATION_NEWTON_3RD:
+				presets.loadDefaultNewton3rd();
+				break;
+			case FractalGenerator.EQUATION_NEWTON:
+				presets.loadDefaultNewton();
+				break;
+			}
+		}
+
 		if (colorParams == null)
 		{
 			colorParams = new HashSet<String>();

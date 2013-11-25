@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+#Mon Apr 02 21:35:29 Europe/Berlin 2012
+aInterval=-2,2
+warmup=8
+rotateLeft=false
+iterations=10
+bInterval=-2,2
+x0=0.5
+histogramEqualization=false
+cyclicColoration=0
+chaosGradient=\#000000
+equation=2
+sequence=BBBBBBBB
+name=Classic Newton
+oneGradient=true
+stabilityGradient=\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3,\#ff0000,\#ff8000,\#ffff00,\#008000,\#0000ff,\#4b0082,\#9400d3
+exponentInterval=-4.7576427,7.45275
+gradations=65000

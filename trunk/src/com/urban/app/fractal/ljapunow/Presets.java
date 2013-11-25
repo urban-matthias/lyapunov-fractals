@@ -252,8 +252,43 @@ public class Presets
 		}
 		else
 		{
-			settings = activity.getSharedPreferences(STORAGE_SETTINGS, 0);
-			Storage.deserialize(settings.getString(SETTINGS_DEFAULT, ""));
+			loadDefaultLogistic();
+		}
+	}
+
+	public void loadDefaultLogistic()
+	{
+		try
+		{
+			Storage.load(activity.getResources().openRawResource(R.raw.default_logistic));
+		}
+		catch (Exception e)
+		{
+			Logger.error(activity, e);
+		}
+	}
+
+	public void loadDefaultNewton3rd()
+	{
+		try
+		{
+			Storage.load(activity.getResources().openRawResource(R.raw.default_newton_3rd));
+		}
+		catch (Exception e)
+		{
+			Logger.error(activity, e);
+		}
+	}
+
+	public void loadDefaultNewton()
+	{
+		try
+		{
+			Storage.load(activity.getResources().openRawResource(R.raw.default_newton));
+		}
+		catch (Exception e)
+		{
+			Logger.error(activity, e);
 		}
 	}
 
@@ -329,7 +364,8 @@ public class Presets
 
 	public void forceAddPredefined()
 	{
-		importFromResource(R.raw.default_setting);
+		String currentPreset = Storage.serialize();
+
 		importFromResource(R.raw.elysian_fields);
 		importFromResource(R.raw.filigree_entities);
 		importFromResource(R.raw.floral_stage);
@@ -373,5 +409,7 @@ public class Presets
 		importFromResource(R.raw.royal_coat_of_arms);
 		importFromResource(R.raw.swirling_crosses);
 		importFromResource(R.raw.thorns_island);
+
+		Storage.deserialize(currentPreset);
 	}
 }
