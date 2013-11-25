@@ -119,7 +119,8 @@
                 android:title="@string/menu_import"/>
             <item
                 android:id="@+id/export_preset"
-                android:title="@string/menu_export"/>
+                android:title="@string/menu_export"/><item android:id="@+id/restore_predef" android:title="@string/menu_restore_predef" />
+            
         </menu>
     </item>
     <item

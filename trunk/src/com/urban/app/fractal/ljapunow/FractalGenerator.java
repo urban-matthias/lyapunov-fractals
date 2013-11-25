@@ -72,7 +72,7 @@ public class FractalGenerator extends AsyncTask<Void, Integer, Integer>
 	// Native implementation of the newton 3rd grade equations
 	private static native double newton3rdGrade(double a, double b, double x0, int iterations, int warmup, char[] sequenceArray, int sequence_length);
 
-	public FractalGenerator(ImageView view, ProgressBar progressBar, State savedState)
+	public FractalGenerator(ImageView view, ProgressBar progressBar, State savedState, boolean keepPixels)
 	{
 		this.progressBar = progressBar;
 		this.view = view;
@@ -89,15 +89,15 @@ public class FractalGenerator extends AsyncTask<Void, Integer, Integer>
 		swap = NumberUtil.toBoolean(Storage.get(STORAGE_ROTATE_LEFT));
 		equation = NumberUtil.toInt(Storage.get(STORAGE_EQUATION));
 
-		initState(savedState);
+		initState(savedState, keepPixels);
 	}
 
 	public static void loadNativeCodeLib()
 	{
 		System.loadLibrary("equations");
 	}
-	
-	private void initState(State savedState)
+
+	private void initState(State savedState, boolean keepPixels)
 	{
 		synchronized (lock)
 		{
@@ -144,8 +144,11 @@ public class FractalGenerator extends AsyncTask<Void, Integer, Integer>
 						Arrays.fill(state.gridPoints[i], false);
 					}
 				}
-				Arrays.fill(state.pixels, 0);
-				Arrays.fill(state.exponents, 0);
+				if (keepPixels == false)
+				{
+					Arrays.fill(state.pixels, 0);
+					Arrays.fill(state.exponents, 0);
+				}
 			}
 		}
 	}
@@ -173,6 +176,8 @@ public class FractalGenerator extends AsyncTask<Void, Integer, Integer>
 		progressBar.setMax(state.height * state.width);
 		progressBar.setVisibility(View.VISIBLE);
 		progressBar.bringToFront();
+
+		view.setPixels(state.pixels, state.exponents, state.measuredMinExp, state.measuredMaxExp, state.width, state.height, false);
 	}
 
 	@Override
@@ -183,11 +188,8 @@ public class FractalGenerator extends AsyncTask<Void, Integer, Integer>
 			progressBar.setVisibility(View.INVISIBLE);
 			if (recolor)
 			{
-				view.setPixels(state.pixels, state.exponents, state.measuredMinExp, state.measuredMaxExp, state.width, state.height);
-				if (state.coloration.histogramEqualizationEnabled() || state.coloration.automaticExponentIntervalEnabled())
-				{
-					view.recalcColors(true);
-				}
+				boolean recalcColors = state.coloration.histogramEqualizationEnabled() || state.coloration.automaticExponentIntervalEnabled();
+				view.setPixels(state.pixels, state.exponents, state.measuredMinExp, state.measuredMaxExp, state.width, state.height, recalcColors);
 			}
 			System.gc();
 		}
@@ -203,7 +205,7 @@ public class FractalGenerator extends AsyncTask<Void, Integer, Integer>
 		progressBar.setVisibility(View.VISIBLE);
 		progressBar.incrementProgressBy(values[0]);
 
-		view.setPixels(state.pixels, state.exponents, state.measuredMinExp, state.measuredMaxExp, state.width, state.height);
+		view.setPixels(state.pixels, state.exponents, state.measuredMinExp, state.measuredMaxExp, state.width, state.height, false);
 	}
 
 	@Override

@@ -111,5 +111,6 @@
     <string name="menu_shuffle_gradient">Shuffle</string>
     <string name="menu_randomize_gradient">Randomize</string>
     <string name="dialog_repeat">Repeat</string>
+    <string name="menu_restore_predef">Restore Predefined</string>
     
 </resources>

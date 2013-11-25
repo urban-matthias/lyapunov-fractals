@@ -324,6 +324,11 @@ public class Presets
 		editor.commit();
 
 		// Add the predefined settings
+		forceAddPredefined();
+	}
+
+	public void forceAddPredefined()
+	{
 		importFromResource(R.raw.default_setting);
 		importFromResource(R.raw.elysian_fields);
 		importFromResource(R.raw.filigree_entities);

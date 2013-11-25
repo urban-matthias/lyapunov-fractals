@@ -108,5 +108,6 @@
     <string name="menu_shuffle_gradient">Vertauschen</string>
     <string name="menu_randomize_gradient">Zufallsbelegung</string>
     <string name="dialog_repeat">Wiederholen</string>
+    <string name="menu_restore_predef">Voreinst. Wiederherstellen</string>
     
  </resources>

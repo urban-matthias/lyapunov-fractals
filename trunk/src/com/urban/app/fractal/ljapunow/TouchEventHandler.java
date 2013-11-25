@@ -124,14 +124,14 @@ public class TouchEventHandler
 			mode = Mode.INITIAL;
 			translateABInterval();
 			fractalView.setControl(ImageView.CONTROL_NONE, 0, 0);
-			fractalView.generateFractal((int) xOffset, (int) yOffset);
+			fractalView.generateFractalDragged((int) xOffset, (int) yOffset);
 		}
 		else if (mode == Mode.SCALE)
 		{
 			mode = Mode.INITIAL;
 			scaleABInterval(DisplayMetrics.isPortrait() ? eventY / startDistance : startDistance / eventX);
 			fractalView.setControl(ImageView.CONTROL_NONE, 0, 0);
-			fractalView.generateFractal();
+			fractalView.generateFractalScaled();
 		}
 		else if (mode == Mode.TOUCH)
 		{
