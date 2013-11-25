@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -330,10 +331,13 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 		case R.id.export_preset:
 			presets.export(this);
 			break;
+		case R.id.restore_predef:
+			presets.forceAddPredefined();
+			break;
 		case R.id.save_image:
 			intent = new Intent(getBaseContext(), FileSelection.class);
 			intent.putExtra(FileSelection.TITLE, getResources().getString(R.string.menu_save_image) + ": " + Storage.get(Presets.SETTINGS_NAME));
-			intent.putExtra(FileSelection.START_PATH, "/sdcard");
+			intent.putExtra(FileSelection.START_PATH, Environment.getExternalStorageDirectory().getPath());
 			intent.putExtra(FileSelection.FILE_NAME, Storage.get(Presets.SETTINGS_NAME) + ".png");
 			startActivityForResult(intent, REQUEST_SAVE_IMAGE);
 			break;

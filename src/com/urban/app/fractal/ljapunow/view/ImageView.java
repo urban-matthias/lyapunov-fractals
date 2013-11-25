@@ -1,6 +1,7 @@
 package com.urban.app.fractal.ljapunow.view;
 
 import java.io.FileOutputStream;
+import java.util.Arrays;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -38,6 +39,7 @@ public class ImageView extends View
 
 	private static final String		lock			= new String("");
 	private static Bitmap			image			= null;
+	private static Bitmap			localCanvas		= null;
 	private FractalGenerator		generator		= null;
 	private FractalGenerator.State	reusedState		= null;
 	private FractalColoration		coloration		= null;
@@ -116,7 +118,7 @@ public class ImageView extends View
 		return debug;
 	}
 
-	public void setPixels(int[] pixels, float[] exponents, float measuredMinExp, float measuredMaxExp, int width, int height)
+	public void setPixels(int[] pixels, float[] exponents, float measuredMinExp, float measuredMaxExp, int width, int height, boolean colorRecalculation)
 	{
 		try
 		{
@@ -126,6 +128,11 @@ public class ImageView extends View
 				this.colors = pixels;
 				this.measuredMaxExp = NumberUtil.align(measuredMaxExp);
 				this.measuredMinExp = NumberUtil.align(measuredMinExp);
+				
+				if (colorRecalculation)
+				{
+					recalcColors();
+				}
 
 				if (image == null || image.getWidth() != width || image.getHeight() != height)
 				{
@@ -153,34 +160,7 @@ public class ImageView extends View
 			{
 				if (exponents != null && image != null && (force || !isGeneratingFractal()))
 				{
-					if (coloration == null)
-					{
-						coloration = new FractalColoration();
-					}
-					else
-					{
-						coloration.init();
-					}
-					if (coloration.histogramEqualizationEnabled())
-					{
-						coloration.histogramEqualization(exponents, measuredMinExp, measuredMaxExp, colors);
-					}
-					else if (coloration.automaticExponentIntervalEnabled())
-					{
-						float minExp = measuredMinExp < -10 ? -10 : measuredMinExp;
-						float maxExp = measuredMaxExp > 10 ? 10 : measuredMaxExp;
-						for (int i = 0; i < exponents.length; i++)
-						{
-							colors[i] = coloration.calculateColor(exponents[i], minExp, maxExp);
-						}
-					}
-					else
-					{
-						for (int i = 0; i < exponents.length; i++)
-						{
-							colors[i] = coloration.calculateColor(exponents[i]);
-						}
-					}
+					recalcColors();
 					image.setPixels(colors, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
 					invalidate();
 				}
@@ -192,31 +172,76 @@ public class ImageView extends View
 		}
 	}
 
-	public void generateFractal()
+	private void recalcColors()
 	{
-		generateFractal(null);
+		if (coloration == null)
+		{
+			coloration = new FractalColoration();
+		}
+		else
+		{
+			coloration.init();
+		}
+		if (coloration.histogramEqualizationEnabled())
+		{
+			coloration.histogramEqualization(exponents, measuredMinExp, measuredMaxExp, colors);
+		}
+		else if (coloration.automaticExponentIntervalEnabled())
+		{
+			float minExp = measuredMinExp < -10 ? -10 : measuredMinExp;
+			float maxExp = measuredMaxExp > 10 ? 10 : measuredMaxExp;
+			for (int i = 0; i < exponents.length; i++)
+			{
+				colors[i] = coloration.calculateColor(exponents[i], minExp, maxExp);
+			}
+		}
+		else
+		{
+			for (int i = 0; i < exponents.length; i++)
+			{
+				colors[i] = coloration.calculateColor(exponents[i]);
+			}
+		}
 	}
 
-	public void generateFractal(int xOffset, int yOffset)
+	public void generateFractal()
 	{
-		generateFractal(null, xOffset, yOffset);
+		generateFractal(null, 0, 0, false);
 	}
 
 	public void generateFractal(FractalGenerator.State savedState)
 	{
-		generateFractal(savedState, 0, 0);
+		generateFractal(savedState, 0, 0, false);
 	}
 
-	public void generateFractal(FractalGenerator.State savedState, int xOffset, int yOffset)
+	public void generateFractalScaled()
+	{
+		generateFractal(null, 0, 0, true);
+	}
+
+	public void generateFractalDragged(int xOffset, int yOffset)
+	{
+		generateFractal(null, xOffset, yOffset, true);
+	}
+
+	public void generateFractal(FractalGenerator.State savedState, int xOffset, int yOffset, boolean initWithCurrentPixels)
 	{
 		try
 		{
 			synchronized (lock)
 			{
+				stopGenerator(false);
+
+				boolean keepPixels = false;
+				if (initWithCurrentPixels)
+				{
+					keepPixels = updatePixels(reusedState);
+				}
+				
 				setOrigin(0, 0);
 				setScale(1);
-				stopGenerator(false);
-				startGenerator(savedState, xOffset, yOffset);
+				
+				startGenerator(savedState, xOffset, yOffset, keepPixels);
 			}
 		}
 		catch (Throwable e)
@@ -225,11 +250,11 @@ public class ImageView extends View
 		}
 	}
 
-	private void startGenerator(FractalGenerator.State savedState, int xOffset, int yOffset)
+	private void startGenerator(FractalGenerator.State savedState, int xOffset, int yOffset, boolean keepPixels)
 	{
 		synchronized (lock)
 		{
-			generator = new FractalGenerator(this, progressBar, savedState != null ? savedState : reusedState);
+			generator = new FractalGenerator(this, progressBar, savedState != null ? savedState : reusedState, keepPixels);
 			reusedState = generator.getState();
 			generator.execute();
 		}
@@ -256,6 +281,66 @@ public class ImageView extends View
 	public boolean isGeneratingFractal()
 	{
 		return generator != null && !generator.getStatus().equals(Status.FINISHED) && !generator.isCancelled();
+	}
+
+	private boolean updatePixels(FractalGenerator.State savedState)
+	{
+		try
+		{
+			synchronized (lock)
+			{
+				if (image != null)
+				{
+					int width = image.getWidth();
+					int height = image.getHeight();
+					
+					if (localCanvas == null || localCanvas.getWidth() != width || localCanvas.getHeight() != height)
+					{
+						if (localCanvas != null)
+						{
+							localCanvas.recycle();
+						}
+						localCanvas = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+					}
+					else
+					{
+						Arrays.fill(savedState.pixels, 0);
+						localCanvas.setPixels(savedState.pixels, 0, width, 0, 0, width, height);
+					}
+
+					Canvas canvas = new Canvas(localCanvas);
+					
+					canvas.save();
+
+					canvas.translate(DisplayMetrics.width / 2, DisplayMetrics.height / 2);
+
+					int rotationAngle = getRotationAngle();
+					if (rotationAngle != 0)
+					{
+						canvas.rotate(rotationAngle);
+					}
+
+					if (scale != 1)
+					{
+						canvas.scale(1 / scale, 1 / scale);
+					}
+
+					int xoffset = width / 2;
+					int yoffset = height / 2;
+					canvas.drawBitmap(image, x0 - xoffset, y0 - yoffset, paint);
+
+					canvas.restore();
+					
+					localCanvas.getPixels(savedState.pixels, 0, width, 0, 0, width, height);
+					return true;
+				}
+			}
+		}
+		catch (Throwable e)
+		{
+			Logger.error(this, e);
+		}
+		return false;
 	}
 
 	@Override
@@ -287,7 +372,7 @@ public class ImageView extends View
 					canvas.drawBitmap(image, x0 - xoffset, y0 - yoffset, paint);
 
 					canvas.restore();
-
+					
 					if (debug)
 					{
 						drawDebugInfo(canvas);
