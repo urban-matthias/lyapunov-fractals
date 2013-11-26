@@ -161,7 +161,7 @@ public class TouchEventHandler
 			{
 				scaleABInterval(startDistance / distance);
 				fractalView.setControl(ImageView.CONTROL_NONE, 0, 0);
-				fractalView.generateFractal();
+				fractalView.generateFractalScaled();
 			}
 			else
 			{
