@@ -26,7 +26,7 @@ public class AboutDialog extends Dialog
 	{
 		setContentView(R.layout.about);
 
-		setTitle(R.string.dialog_about);
+		//setTitle(R.string.dialog_about);
 
 		TextView tv = (TextView) findViewById(R.id.legal_text);
 		tv.setText(FileUtil.readRawTextFile(mContext, R.raw.legal));
