@@ -9,14 +9,14 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center"
+            android:layout_gravity="center"
             android:src="@drawable/about" />
 
         <TextView
             android:id="@+id/info_text"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="left|center"
             android:gravity="center" />
     </TableRow>
 
@@ -26,10 +26,10 @@
             android:id="@+id/legal_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dip"
+            android:layout_margin="20dip"
             android:layout_span="2"
             android:textColor="#cccccc"
-            android:textSize="10dip"
+            android:textSize="12sp"
             android:textStyle="italic" />
     </TableRow>
 
