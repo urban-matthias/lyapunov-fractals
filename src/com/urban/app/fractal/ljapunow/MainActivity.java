@@ -564,6 +564,11 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 
 	public void onStorageChange(String storageID)
 	{
+		if (storageID == null)
+		{
+			return;
+		}
+		
 		if (storageID.equals(FractalGenerator.STORAGE_EQUATION))
 		{
 			int equation = NumberUtil.toInt(Storage.get(FractalGenerator.STORAGE_EQUATION));
