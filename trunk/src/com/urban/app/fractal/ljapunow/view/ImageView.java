@@ -309,16 +309,7 @@ public class ImageView extends View
 					}
 
 					Canvas canvas = new Canvas(localCanvas);
-					
-					canvas.save();
-
-					canvas.translate(DisplayMetrics.width / 2, DisplayMetrics.height / 2);
-
-					int rotationAngle = getRotationAngle();
-					if (rotationAngle != 0)
-					{
-						canvas.rotate(rotationAngle);
-					}
+					canvas.translate(width / 2, height / 2);
 
 					if (scale != 1)
 					{
@@ -329,8 +320,6 @@ public class ImageView extends View
 					int yoffset = height / 2;
 					canvas.drawBitmap(image, x0 - xoffset, y0 - yoffset, paint);
 
-					canvas.restore();
-					
 					localCanvas.getPixels(savedState.pixels, 0, width, 0, 0, width, height);
 					return true;
 				}
