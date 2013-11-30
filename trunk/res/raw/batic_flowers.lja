@@ -1,0 +1,18 @@
+#Ljapunow Fractals Settings, Version 1.0
+warmup=51
+x0=0.5226126
+chaosGradient=\#fbfdc5,\#610fa0,\#0ca056,\#f82a8d
+autoExponentInterval=true
+histogramEqualization=false
+rotateLeft=false
+sequence=BC
+bInterval=-6.651476441299575,6.6904803209432195
+cyclicColoration=0
+aInterval=-6.6916895749370635,6.650267187305735
+name=Batic Flowers
+equation=1
+exponentInterval=-0.3465736,10
+iterations=8
+gradations=16
+oneGradient=true
+stabilityGradient=\#235436,\#faac54,\#8a1d68,\#66c881,\#2dd4f4,\#b09869,\#d338e4,\#ecd752
