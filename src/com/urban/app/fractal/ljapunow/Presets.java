@@ -409,6 +409,9 @@ public class Presets
 		importFromResource(R.raw.royal_coat_of_arms);
 		importFromResource(R.raw.swirling_crosses);
 		importFromResource(R.raw.thorns_island);
+		importFromResource(R.raw.secret_seal);
+		importFromResource(R.raw.batic_flowers);
+		importFromResource(R.raw.made_of_wax);
 
 		Storage.deserialize(currentPreset);
 	}
