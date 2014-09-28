@@ -13,38 +13,34 @@
         android:visible="false">
     </item>
     <item
-        android:id="@+id/sub_parameters"
-        android:icon="@drawable/ic_menu_equalizer"
-        android:title="@string/menu_sub_params">
+        android:id="@+id/sub_presets"
+        android:icon="@drawable/ic_menu_categories"
+        android:title="@string/menu_sub_presets"
+        android:showAsAction="ifRoom">
         <menu>
             <item
-                android:id="@+id/sequence"
-                android:title="@string/menu_sequence"/>
+                android:id="@+id/load_preset"
+                android:title="@string/menu_load"/>
             <item
-                android:id="@+id/iterations"
-                android:title="@string/menu_iterations"/>
+                android:id="@+id/save_preset"
+                android:title="@string/menu_save"/>
             <item
-                android:id="@+id/warmup"
-                android:title="@string/menu_warmup"/>
+                android:id="@+id/remove_preset"
+                android:title="@string/menu_remove"/>
             <item
-                android:id="@+id/x_interval"
-                android:title="@string/menu_xint"/>
+                android:id="@+id/import_preset"
+                android:title="@string/menu_import"/>
             <item
-                android:id="@+id/y_interval"
-                android:title="@string/menu_yint"/>
-            <item
-                android:id="@+id/x0"
-                android:title="@string/menu_x0"/>
-            <item android:id="@+id/equation" android:title="@string/menu_equation" /><item
-                android:id="@+id/random_params"
-                android:title="@string/menu_randomize"/>
+                android:id="@+id/export_preset"
+                android:title="@string/menu_export"/><item android:id="@+id/restore_predef" android:title="@string/menu_restore_predef" />
             
         </menu>
     </item>
     <item
         android:id="@+id/sub_color"
         android:icon="@drawable/ic_menu_colorpicker"
-        android:title="@string/menu_sub_color">
+        android:title="@string/menu_sub_color"
+        android:showAsAction="ifRoom">
         <menu>
             <item
                 android:id="@+id/stability_gradient"
@@ -76,15 +72,41 @@
         </menu>
     </item>
     <item
-        android:id="@+id/sub_display"
-        android:icon="@drawable/ic_menu_monitor"
-        android:title="@string/menu_sub_display">
+        android:id="@+id/sub_parameters"
+        android:icon="@drawable/ic_menu_equalizer"
+        android:title="@string/menu_sub_params"
+        android:showAsAction="ifRoom">
         <menu>
             <item
-                android:id="@+id/fullscreen"
-                android:checkable="true"
-                android:checked="true"
-                android:title="@string/menu_fullscreen"/>
+                android:id="@+id/sequence"
+                android:title="@string/menu_sequence"/>
+            <item
+                android:id="@+id/iterations"
+                android:title="@string/menu_iterations"/>
+            <item
+                android:id="@+id/warmup"
+                android:title="@string/menu_warmup"/>
+            <item
+                android:id="@+id/x_interval"
+                android:title="@string/menu_xint"/>
+            <item
+                android:id="@+id/y_interval"
+                android:title="@string/menu_yint"/>
+            <item
+                android:id="@+id/x0"
+                android:title="@string/menu_x0"/>
+            <item android:id="@+id/equation" android:title="@string/menu_equation" /><item
+                android:id="@+id/random_params"
+                android:title="@string/menu_randomize"/>
+            
+        </menu>
+    </item>
+    <item
+        android:id="@+id/sub_display"
+        android:icon="@drawable/ic_menu_monitor"
+        android:title="@string/menu_sub_display"
+        android:showAsAction="ifRoom">
+        <menu>
             <item
                 android:id="@+id/swap"
                 android:checkable="true"
@@ -101,32 +123,10 @@
         </menu>
     </item>
     <item
-        android:id="@+id/sub_presets"
-        android:icon="@drawable/ic_menu_categories"
-        android:title="@string/menu_sub_presets">
-        <menu>
-            <item
-                android:id="@+id/load_preset"
-                android:title="@string/menu_load"/>
-            <item
-                android:id="@+id/save_preset"
-                android:title="@string/menu_save"/>
-            <item
-                android:id="@+id/remove_preset"
-                android:title="@string/menu_remove"/>
-            <item
-                android:id="@+id/import_preset"
-                android:title="@string/menu_import"/>
-            <item
-                android:id="@+id/export_preset"
-                android:title="@string/menu_export"/><item android:id="@+id/restore_predef" android:title="@string/menu_restore_predef" />
-            
-        </menu>
-    </item>
-    <item
         android:id="@+id/sub_help"
         android:icon="@drawable/ic_menu_light"
-        android:title="@string/menu_sub_help">
+        android:title="@string/menu_sub_help"
+        android:showAsAction="ifRoom">
         <menu>
             <item
                 android:id="@+id/help_contents"

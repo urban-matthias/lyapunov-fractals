@@ -19,7 +19,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ProgressBar;
 
 import com.urban.app.fractal.ljapunow.activity.FileSelection;
@@ -53,7 +52,6 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 	private ProgressBar			progressBar				= null;
 	private TouchEventHandler	touchEventHandler		= null;
 	private View				mainView				= null;
-	private boolean				fullScreen				= true;
 	private State				savedState				= null;
 	private Set<String>			colorParams				= null;
 	private Set<String>			generatorParams			= null;
@@ -65,7 +63,7 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 	{
 		super.onCreate(savedInstanceState);
 
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
 
 		mainView = getLayoutInflater().inflate(R.layout.main, null);
 		setContentView(mainView);
@@ -143,11 +141,6 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 
 		touchEventHandler = new TouchEventHandler(this, imageView);
 
-		if (fullScreen)
-		{
-			setFullscreen(fullScreen);
-		}
-
 		FractalGenerator.loadNativeCodeLib();
 		imageView.generateFractal(savedState == null ? null : savedState.generatorState);
 	}
@@ -174,7 +167,7 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 	{
 		// Save current settings to be loaded on next start
 		presets.saveAsLast();
-		
+
 		if (imageView != null)
 		{
 			imageView.stopGenerator(false);
@@ -185,56 +178,61 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-		if (imageView == null)
-		{
-			return false;
-		}
-
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main_menu, menu);
-		return true;
+		return super.onCreateOptionsMenu(menu);
 	}
 
 	@Override
-	public boolean onPrepareOptionsMenu(Menu menu)
+	public boolean onMenuOpened(int featureId, Menu menu)
 	{
-		if (imageView == null)
+		if (menu != null && (featureId == Window.FEATURE_OPTIONS_PANEL || featureId == Window.FEATURE_ACTION_BAR))
 		{
-			return false;
-		}
+			if (imageView != null && imageView.isGeneratingFractal())
+			{
+				setVisible(menu, R.id.generate, false);
+				setVisible(menu, R.id.stop, true);
+			}
+			else
+			{
+				setVisible(menu, R.id.generate, true);
+				setVisible(menu, R.id.stop, false);
+			}
 
-		if (imageView.isGeneratingFractal())
+			boolean rotateLeft = NumberUtil.toBoolean(Storage.get(FractalGenerator.STORAGE_ROTATE_LEFT));
+			setChecked(menu, R.id.swap, rotateLeft);
+
+			boolean oneGradient = NumberUtil.toBoolean(Storage.get(FractalColoration.STORAGE_ONE_GRADIENT));
+			setChecked(menu, R.id.one_gradient, oneGradient);
+			setVisible(menu, R.id.chaos_gradient, !oneGradient);
+
+			boolean histogram = NumberUtil.toBoolean(Storage.get(FractalColoration.STORAGE_HISTOGRAM));
+			setChecked(menu, R.id.histogram, histogram);
+
+			boolean autoExp = NumberUtil.toBoolean(Storage.get(FractalColoration.STORAGE_AUTO_EXP_INTERVAL));
+			setChecked(menu, R.id.auto_exponent_interval, autoExp);
+
+			setChecked(menu, R.id.debug, (imageView == null ? false : imageView.getDebug()));
+		}
+		return super.onMenuOpened(featureId, menu);
+	}
+	
+	private void setVisible(Menu menu, int resourceId, boolean visible)
+	{
+		MenuItem item = menu.findItem(resourceId);
+		if (item != null)
 		{
-			menu.findItem(R.id.generate).setVisible(false);
-			menu.findItem(R.id.stop).setVisible(true);
+			item.setVisible(visible);
 		}
-		else
+	}
+	
+	private void setChecked(Menu menu, int resourceId, boolean checked)
+	{
+		MenuItem item = menu.findItem(resourceId);
+		if (item != null)
 		{
-			menu.findItem(R.id.generate).setVisible(true);
-			menu.findItem(R.id.stop).setVisible(false);
+			item.setChecked(checked);
 		}
-
-		boolean rotateLeft = NumberUtil.toBoolean(Storage.get(FractalGenerator.STORAGE_ROTATE_LEFT));
-		menu.findItem(R.id.swap).setChecked(rotateLeft);
-
-		boolean cyclicColoration = NumberUtil.toBoolean(Storage.get(FractalColoration.STORAGE_CYCLIC_COLORATION));
-		menu.findItem(R.id.cyclic_coloration).setChecked(cyclicColoration);
-
-		boolean oneGradient = NumberUtil.toBoolean(Storage.get(FractalColoration.STORAGE_ONE_GRADIENT));
-		menu.findItem(R.id.one_gradient).setChecked(oneGradient);
-		menu.findItem(R.id.chaos_gradient).setVisible(!oneGradient);
-
-		boolean histogram = NumberUtil.toBoolean(Storage.get(FractalColoration.STORAGE_HISTOGRAM));
-		menu.findItem(R.id.histogram).setChecked(histogram);
-
-		boolean autoExp = NumberUtil.toBoolean(Storage.get(FractalColoration.STORAGE_AUTO_EXP_INTERVAL));
-		menu.findItem(R.id.auto_exponent_interval).setChecked(autoExp);
-
-		menu.findItem(R.id.fullscreen).setChecked(fullScreen);
-
-		menu.findItem(R.id.debug).setChecked(imageView.getDebug());
-
-		return super.onPrepareOptionsMenu(menu);
 	}
 
 	@Override
@@ -340,10 +338,6 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 			intent.putExtra(FileSelection.START_PATH, Environment.getExternalStorageDirectory().getPath());
 			intent.putExtra(FileSelection.FILE_NAME, Storage.get(Presets.SETTINGS_NAME) + ".png");
 			startActivityForResult(intent, REQUEST_SAVE_IMAGE);
-			break;
-		case R.id.fullscreen:
-			fullScreen = !fullScreen;
-			setFullscreen(fullScreen);
 			break;
 		case R.id.debug:
 			imageView.setDebug(!imageView.getDebug());
@@ -479,24 +473,9 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 		}
 	}
 
-	private void setFullscreen(boolean fullScreen)
-	{
-		if (fullScreen)
-		{
-			getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-			getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-		}
-		else
-		{
-			getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-			getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		}
-		mainView.requestLayout();
-	}
-
 	private void randomizeParameters()
 	{
-		Random r = new Random(System.currentTimeMillis() + new Long(System.currentTimeMillis()).hashCode());
+		Random r = new Random(System.currentTimeMillis() + Long.valueOf(System.currentTimeMillis()).hashCode());
 
 		String sequence = "" + (char) ('A' + r.nextInt(2));
 		for (int i = 1 + r.nextInt(19); i > 0; i--)
@@ -524,7 +503,7 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 
 	private void randomizeColors()
 	{
-		Random r = new Random(System.currentTimeMillis() + new Long(System.currentTimeMillis()).hashCode());
+		Random r = new Random(System.currentTimeMillis() + Long.valueOf(System.currentTimeMillis()).hashCode());
 
 		String gradient = "";
 		int count = r.nextInt(10) + 2;
@@ -568,7 +547,7 @@ public class MainActivity extends Activity implements OnClickListener, Storage.O
 		{
 			return;
 		}
-		
+
 		if (storageID.equals(FractalGenerator.STORAGE_EQUATION))
 		{
 			int equation = NumberUtil.toInt(Storage.get(FractalGenerator.STORAGE_EQUATION));
