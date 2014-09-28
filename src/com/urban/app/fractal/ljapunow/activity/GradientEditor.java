@@ -25,8 +25,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -68,10 +66,6 @@ public class GradientEditor extends Activity
 		current_gradient = parseGradient(Storage.get(getIntent().getStringExtra(GRADIENT)));
 
 		initPredefinedGradients();
-
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
 
 		setContentView(R.layout.gradient_editor_main);
 

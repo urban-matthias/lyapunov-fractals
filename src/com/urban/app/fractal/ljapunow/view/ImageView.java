@@ -404,7 +404,8 @@ public class ImageView extends View
 
 	private void drawDebugInfo(Canvas canvas)
 	{
-		int line = 0;
+		// start at screen middle
+		int line = (image.getHeight() / 4) / 15;
 		drawDebugLine(canvas, FractalGenerator.STORAGE_SEQUENCE, Storage.get(FractalGenerator.STORAGE_SEQUENCE), ++line);
 		drawDebugLine(canvas, FractalGenerator.STORAGE_A_INTERVAL, Storage.get(FractalGenerator.STORAGE_A_INTERVAL), ++line);
 		drawDebugLine(canvas, FractalGenerator.STORAGE_B_INTERVAL, Storage.get(FractalGenerator.STORAGE_B_INTERVAL), ++line);
