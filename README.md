@@ -5,9 +5,9 @@ This application calculates and visualizes Ljapunow (also Markus-Ljapunow or Mar
 
 From Wikipedia, the free encyclopedia:
 
-*Lyapunov fractals are bifurcational fractals derived from an extension of the logistic map in which the degree of the growth of the population periodically switches between two values A and B.*
+> *Lyapunov fractals are bifurcational fractals derived from an extension of the logistic map in which the degree of the growth of the population periodically switches between two values A and B.*
 
-*A Lyapunov fractal is constructed by mapping the regions of stability and chaotic behaviour (measured using the Lyapunov exponent λ) in the a−b plane for a given periodic sequence of As and Bs.*
+> *A Lyapunov fractal is constructed by mapping the regions of stability and chaotic behaviour (measured using the Lyapunov exponent λ) in the a−b plane for a given periodic sequence of As and Bs.*
 
 See http://en.wikipedia.org/wiki/Lyapunov_fractal for more information.
 
